@@ -1,0 +1,10 @@
+node:
+  env_file:
+    .env
+  build      : "./nodejs"
+  working_dir: "/app"
+  ports      :
+    - "80:80"
+  volumes:
+    - "./server:/app"
+  command: "nodemon --config nodemon.json index.js"
